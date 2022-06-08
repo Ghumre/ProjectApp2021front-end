@@ -13,33 +13,15 @@ import axios from 'axios';
 import ImageUpload from './app/component/ImageUpload';
 import AppForm from './app/component/AppForm';
 import UserProfile from './app/component/UserProfile';
-
-const Stack = createStackNavigator();
-
-const StackNavigator=()=>{
-  return (
-      <Stack.Navigator screenOptions={{headerShown:false}}>
-        <Stack.Screen component={AppForm} name='AppForm'/>
-        <Stack.Screen component={ImageUpload} name='ImageUpload'/>
-        <Stack.Screen component={UserProfile} name='UserProfile'/>
-      </Stack.Navigator>
-  );
-};
-
-
+import 'react-native-gesture-handler';
+import MainContainer from './app/MainContainer';
 
 export default function App() { 
 return(
-  <>
 <NavigationContainer>
-  <StackNavigator/>
-  
-</NavigationContainer>
-
-</>
-);
-
-}
+  <MainContainer/>
+</NavigationContainer>     
+);}
 
 const styles = StyleSheet.create({
   container: {
